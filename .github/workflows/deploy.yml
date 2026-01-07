@@ -27,7 +27,7 @@ jobs:
       - name: Setup Node.js ⚙️
         uses: actions/setup-node@v4 # 2. Node.js 환경 설정
         with:
-          node-version: "18"
+          node-version: "20"
           cache: "npm"
 
       - name: Install dependencies 📦

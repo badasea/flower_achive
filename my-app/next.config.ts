@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
   // GitHub Pages 배포를 위한 경로 설정입니다.
   // '/저장소-이름' 형식으로 꼭 바꿔주세요!
   basePath: '/flower_achive',
+  assetPrefix: '/flower_achive', 
 
   // next/image 사용 시 필요할 수 있는 설정입니다.
   images: {

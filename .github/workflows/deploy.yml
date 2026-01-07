@@ -1,0 +1,56 @@
+# 워크플로우의 이름
+name: Deploy Next.js to GitHub Pages
+
+# 언제 이 워크플로우를 실행할 것인지 정의
+on:
+  push:
+    branches:
+      - main # main 브랜치에 push 이벤트가 발생했을 때 실행
+  # (선택사항) Actions 탭에서 수동으로 실행할 수도 있도록 설정
+  workflow_dispatch:
+
+# 작업(Job)을 수행할 때 필요한 권한 설정
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 어떤 작업(Job)을 수행할 것인지 정의
+jobs:
+  # 빌드 작업
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4 # 1. 리포지토리 코드를 가상 환경으로 불러옴
+
+      - name: Setup Node.js ⚙️
+        uses: actions/setup-node@v4 # 2. Node.js 환경 설정
+        with:
+          node-version: "18"
+          cache: "npm"
+
+      - name: Install dependencies 📦
+        run: npm install # 3. 의존성 패키지 설치
+
+      - name: Build project 🔨
+        # basePath 설정을 위해 package.json의 build 스크립트를 수정할 필요 없음
+        run: npm run build # 4. 프로젝트 빌드 (out 폴더에 결과물이 생성됨)
+
+      - name: Upload artifact ⬆️
+        uses: actions/upload-pages-artifact@v3 # 5. 빌드 결과물을 GitHub Pages에 배포할 수 있도록 업로드
+        with:
+          path: ./out # Next.js의 빌드 결과물 폴더
+
+  # 배포 작업
+  deploy:
+    # build 작업이 성공적으로 끝나야 실행됨
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages 🚀
+        id: deployment
+        uses: actions/deploy-pages@v4 # 6. 업로드된 결과물을 GitHub Pages에 배포

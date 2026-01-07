@@ -32,16 +32,18 @@ jobs:
           cache-dependency-path: "./my-app/package-lock.json"
 
       - name: Install dependencies 📦
+        working-directory: ./my-app  # 🔧 my-app에서 설치
         run: npm install # 3. 의존성 패키지 설치
 
       - name: Build project 🔨
+        working-directory: ./my-app  # 🔧 my-app에서 설치
         # basePath 설정을 위해 package.json의 build 스크립트를 수정할 필요 없음
         run: npm run build # 4. 프로젝트 빌드 (out 폴더에 결과물이 생성됨)
 
       - name: Upload artifact ⬆️
         uses: actions/upload-pages-artifact@v3 # 5. 빌드 결과물을 GitHub Pages에 배포할 수 있도록 업로드
         with:
-          path: ./out # Next.js의 빌드 결과물 폴더
+          path: ./my-app/out # Next.js의 빌드 결과물 폴더
 
   # 배포 작업
   deploy:

@@ -1,9 +1,9 @@
-import MainContainer from "./MainContainer";
+import ProfileContainer from "./@container/ProfileContainer";
 
 export default function Home() {
   return (
     <>
-      <MainContainer />
+      <ProfileContainer />
     </>
   );
 }

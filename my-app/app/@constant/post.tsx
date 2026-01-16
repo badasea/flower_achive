@@ -1,9 +1,5 @@
-import PostsGrid from "./components/PostsGrid";
-import ProfileHeader from "./components/ProfileHeader";
-
-
-export default function ProfilePage() {
-  const posts = [{
+export const posts = [
+    {
         id: 0,
         src: "/flower_achive/vercel.svg",
         likes: 1,
@@ -28,11 +24,3 @@ export default function ProfilePage() {
         comments: 1
     }
 ];
-
-  return (
-    <main className="bg-white min-h-screen">
-      <ProfileHeader />
-      <PostsGrid posts={posts} />
-    </main>
-  );
-}

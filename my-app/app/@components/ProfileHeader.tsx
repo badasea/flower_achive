@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function ProfileHeader() {
   return (
-    <header className="flex flex-col md:flex-row items-start md:items-center p-4 md:p-8 max-w-6xl mx-auto">
+    <header className="flex gap-10 flex-row items-center p-4 md:p-8 max-w-6xl mx-auto">
       <div className="w-24 h-24 md:w-48 md:h-48 flex-shrink-0 mb-4 md:mb-0 md:mr-8">
         <Image
           src="/flower_achive/next.svg"

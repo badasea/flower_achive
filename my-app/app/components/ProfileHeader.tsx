@@ -7,7 +7,7 @@ export default function ProfileHeader() {
     <header className="flex flex-col md:flex-row items-start md:items-center p-4 md:p-8 max-w-6xl mx-auto">
       <div className="w-24 h-24 md:w-48 md:h-48 flex-shrink-0 mb-4 md:mb-0 md:mr-8">
         <Image
-          src=""
+          src="/flower_achive/next.svg"
           alt="Profile"
           width={192}
           height={192}
@@ -20,8 +20,8 @@ export default function ProfileHeader() {
         </div>
         <ul className="flex gap-8 mb-4 text-sm">
           <li><span className="font-bold block text-lg">136</span> posts</li>
-          <li><span className="font-bold block text-lg">40.5k</span> followers</li>
-          <li><span className="font-bold block text-lg">302</span> following</li>
+          <li><span className="font-bold block text-lg">2025</span>since</li>
+          <li><span className="font-bold block text-lg">1996.10.20</span> birth</li>
         </ul>
       </div>
     </header>

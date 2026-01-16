@@ -11,24 +11,30 @@ interface Post {
 export default function PostsGrid({ posts }: { posts: Post[] }) {
   return (
     <div className="max-w-6xl mx-auto px-4 pb-8">
-      <nav className="flex justify-around border-t pt-4 mb-6 uppercase tracking-widest font-semibold text-xs text-gray-600">
-        <a className="flex flex-col items-center p-3 border-t-2 border-black -mt-px">
-          <svg className="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm3 1h8v2H7V4zm0 4h8v2H7V8zm0 4h8v2H7v-2z" clipRule="evenodd" />
-          </svg>
-          <span>Posts</span>
+      <nav className="flex justify-around pt-4 mb-6 uppercase tracking-widest font-semibold text-xs text-gray-600">
+        <a className="flex flex-col items-center p-3 border-b-2 border-black -mt-px">
+          <Image
+            src="/flower_achive/feed.png"
+            alt="feed"
+            width={24}
+            height={24}
+          />
         </a>
         <a className="flex flex-col items-center p-3">
-          <svg className="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M8 0H5a2 2 0 00-2 2v4a2 2 0 002 2h3a2 2 0 002-2V2a2 2 0 00-2-2zm7 0h-3a2 2 0 00-2 2v4a2 2 0 002 2h3a2 2 0 002-2V2a2 2 0 00-2-2zM8 12H5a2 2 0 00-2 2v4a2 2 0 002 2h3a2 2 0 002-2v-4a2 2 0 00-2-2zm7 0h-3a2 2 0 00-2 2v4a2 2 0 002 2h3a2 2 0 002-2v-4a2 2 0 00-2-2z" />
-          </svg>
-          <span>Reels</span>
+          <Image
+            src="/flower_achive/reel.jpg"
+            alt="reel"
+            width={24}
+            height={24}
+          />
         </a>
         <a className="flex flex-col items-center p-3">
-          <svg className="w-6 h-6 mb-1 border border-gray-400 rounded p-1" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9zM4 5a2 2 0 012-2h4a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm5 1H6v12h3V6z" clipRule="evenodd" />
-          </svg>
-          <span>Tagged</span>
+          <Image
+            src="/flower_achive/tagged.png"
+            alt="tagged"
+            width={24}
+            height={24}
+          />
         </a>
       </nav>
       <div className="grid grid-cols-3 gap-2 md:gap-4">

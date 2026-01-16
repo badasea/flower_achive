@@ -16,7 +16,7 @@ export default function ProfileHeader() {
       </div>
       <div className="flex-1 min-w-0">
         <div className="flex flex-wrap items-center mb-4 gap-4">
-          <h1 className="text-3xl md:text-4xl font-bold">바다의 꽃꽂이 아카이브</h1>
+          <h1 className="text-1xl font-bold">바다의 꽃꽂이 아카이브</h1>
         </div>
         <ul className="flex gap-8 mb-4 text-sm">
           <li><span className="font-bold block text-lg">136</span> posts</li>

@@ -11,7 +11,7 @@ function PostsGrid({ posts, activeTab, handleTabChange }: PostsGridProps) {
   return (
     <div className="max-w-6xl mx-auto px-4 pb-8">
       {/* 네비게이션 - 기존과 동일 */}
-      <nav className="flex justify-around pt-4 mb-6 uppercase tracking-widest font-semibold text-xs text-gray-600">
+      <nav className="flex justify-around mb-6 uppercase tracking-widest font-semibold text-xs text-gray-600">
         <button
           type="button"
           onClick={() => handleTabChange('feed')}
@@ -44,15 +44,15 @@ function PostsGrid({ posts, activeTab, handleTabChange }: PostsGridProps) {
 
       {/* 탭별 컨텐츠 조건부 렌더링 */}
       {activeTab === 'feed' ? (
-        <div className="grid grid-cols-3 gap-2 md:gap-4">
+        <div className="grid grid-cols-3 gap-4">
           {posts.map((post: Post) => (
             <div key={post.id} className="relative group">
-              <div className="w-full pt-[100%] bg-gray-200 rounded-lg overflow-hidden">
+              <div className="w-full h-full  pt-[100%] bg-gray-200 rounded-lg overflow-hidden relative">
                 <Image
                   src={post.src}
                   alt={`Post ${post.id}`}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover"
                 />
               </div>
               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 p-2">
@@ -73,7 +73,7 @@ function PostsGrid({ posts, activeTab, handleTabChange }: PostsGridProps) {
           ))}
         </div>
       ) : (
-        <div className="text-center py-20 text-gray-500">
+        <div className="text-center text-gray-500">
           <p className="text-2xl mb-4">{activeTab.toUpperCase()} 콘텐츠 준비중입니다...</p>
           <p className="text-sm">곧 업데이트될 예정입니다.</p>
         </div>

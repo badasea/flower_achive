@@ -13,10 +13,10 @@ function ProfileContainer() {
   }
   
   return (
-    <main className="bg-white min-h-screen">
+    <>
       <ProfileHeader />
       <PostsGrid posts={posts} activeTab={activeTab} handleTabChange={handleTabChange} />
-    </main>
+    </>
   );
 }
 

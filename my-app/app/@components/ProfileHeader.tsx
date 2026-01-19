@@ -19,9 +19,8 @@ export default function ProfileHeader() {
           <h1 className="text-1xl font-bold">바다의 꽃꽂이 아카이브</h1>
         </div>
         <ul className="flex gap-8 mb-4 text-sm">
-          <li><span className="font-bold block text-lg">136</span> posts</li>
+          <li><span className="font-bold block text-lg">21</span> posts</li>
           <li><span className="font-bold block text-lg">2025</span>since</li>
-          <li><span className="font-bold block text-lg">1996.10.20</span> birth</li>
         </ul>
       </div>
     </header>

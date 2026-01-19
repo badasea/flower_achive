@@ -4,17 +4,17 @@ import { Post } from '../@types';
 interface PostsGridProps {
   posts: Post[];
   activeTab: string;
-  onTabChange: (tab: string) => void;
+  handleTabChange: (tab: string) => void;
 }
 
-function PostsGrid({ posts, activeTab, onTabChange }: PostsGridProps) {
+function PostsGrid({ posts, activeTab, handleTabChange }: PostsGridProps) {
   return (
     <div className="max-w-6xl mx-auto px-4 pb-8">
       {/* 네비게이션 - 기존과 동일 */}
       <nav className="flex justify-around pt-4 mb-6 uppercase tracking-widest font-semibold text-xs text-gray-600">
         <button
           type="button"
-          onClick={() => onTabChange('feed')}
+          onClick={() => handleTabChange('feed')}
           className={`flex flex-col items-center p-3 border-b-2 ${
             activeTab === 'feed' ? 'border-black' : 'border-transparent opacity-60'
           }`}
@@ -24,7 +24,7 @@ function PostsGrid({ posts, activeTab, onTabChange }: PostsGridProps) {
         {/* reel, tagged 버튼도 동일하게 수정 */}
         <button
           type="button"
-          onClick={() => onTabChange('reel')}
+          onClick={() => handleTabChange('reel')}
           className={`flex flex-col items-center p-3 border-b-2 ${
             activeTab === 'reel' ? 'border-black' : 'border-transparent opacity-60'
           }`}
@@ -33,7 +33,7 @@ function PostsGrid({ posts, activeTab, onTabChange }: PostsGridProps) {
         </button>
         <button
           type="button"
-          onClick={() => onTabChange('tagged')}
+          onClick={() => handleTabChange('tagged')}
           className={`flex flex-col items-center p-3 border-b-2 ${
             activeTab === 'tagged' ? 'border-black' : 'border-transparent opacity-60'
           }`}
@@ -47,7 +47,7 @@ function PostsGrid({ posts, activeTab, onTabChange }: PostsGridProps) {
         <div className="grid grid-cols-3 gap-2 md:gap-4">
           {posts.map((post: Post) => (
             <div key={post.id} className="relative group">
-              <div className="w-full pt-[133%] md:pt-[125%] bg-gray-200 rounded-lg overflow-hidden">
+              <div className="w-full pt-[100%] bg-gray-200 rounded-lg overflow-hidden">
                 <Image
                   src={post.src}
                   alt={`Post ${post.id}`}

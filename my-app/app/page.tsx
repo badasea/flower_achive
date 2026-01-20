@@ -2,10 +2,12 @@
 
 import ProfileContainer from "./@container/ProfileContainer";
 
-export default function Home() {
+function ProfilePaga() {
   return (
     <>
       <ProfileContainer />
     </>
   );
 }
+
+export default ProfilePaga;

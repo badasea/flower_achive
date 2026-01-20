@@ -14,7 +14,7 @@ export default function ProfileHeader() {
           className="w-full h-full object-cover rounded-full border-4 border-green-500 p-1"
         />
       </div>
-      <div className="flex-1 min-w-0">
+      <div className="flex-1 min-w-0"> 
         <div className="flex flex-wrap items-center mb-4 gap-4">
           <h1 className="text-1xl font-bold">바다의 꽃꽂이 아카이브</h1>
         </div>

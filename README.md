@@ -1,3 +1,4 @@
 # flower_achive
 
-<img width="602" height="754" alt="image" src="https://github.com/user-attachments/assets/0c047272-7730-4a43-967c-70a7d39bd639" />
+<img width="594" height="902" alt="image" src="https://github.com/user-attachments/assets/2dbc985b-567b-4542-8091-a805450a20d5" />
+

@@ -24,7 +24,9 @@ function DetailForm({ detail, handleMainPageTogo } : DetailFormProps) {
       <div className="border border-gray-200 rounded-xl overflow-hidden bg-white">
         <div className="flex items-center gap-3">
           <div className="min-w-0">
-            <p className="text-sm font-semibold truncate">{detail[0].content}</p>
+            <p className="text-sm font-semibold whitespace-pre-line break-words">
+              {detail[0].content}
+            </p>
           </div>
         </div>
 

@@ -2,6 +2,9 @@
 
 import Image from 'next/image';
 import { Post } from '../@types';
+import { BsGrid3X3 } from "react-icons/bs";
+import { FaRegPlayCircle } from "react-icons/fa";
+import { FiTag } from "react-icons/fi";
 
 interface PostsGridProps {
   posts: Post[];
@@ -22,7 +25,7 @@ function PostsGrid({ posts, activeTab, handleTabChange, handleDetailPageTogo }: 
             activeTab === 'feed' ? 'border-black' : 'border-transparent opacity-60'
           }`}
         >
-          <Image src="/feed.png" alt="feed" width={24} height={24} />
+           <BsGrid3X3 className="h-6 w-6" />
         </button>
         {/* reel, tagged 버튼도 동일하게 수정 */}
         <button
@@ -32,7 +35,7 @@ function PostsGrid({ posts, activeTab, handleTabChange, handleDetailPageTogo }: 
             activeTab === 'reel' ? 'border-black' : 'border-transparent opacity-60'
           }`}
         >
-          <Image src="/reel.jpg" alt="reel" width={24} height={24} />
+          <FaRegPlayCircle className="h-6 w-6" />
         </button>
         <button
           type="button"
@@ -41,7 +44,7 @@ function PostsGrid({ posts, activeTab, handleTabChange, handleDetailPageTogo }: 
             activeTab === 'tagged' ? 'border-black' : 'border-transparent opacity-60'
           }`}
         >
-          <Image src="/tagged.png" alt="tagged" width={24} height={24} />
+          <FiTag className="h-6 w-6" />
         </button>
       </nav>
 

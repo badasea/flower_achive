@@ -20,6 +20,7 @@ function PostsGrid({ posts, activeTab, handleTabChange, handleDetailPageTogo }: 
       <nav className="flex justify-around mb-6 uppercase tracking-widest font-semibold text-xs text-gray-600">
         <button
           type="button"
+          aria-label="feed"
           onClick={() => handleTabChange('feed')}
           className={`flex flex-col items-center p-3 border-b-2 ${
             activeTab === 'feed' ? 'border-black' : 'border-transparent opacity-60'
@@ -30,6 +31,7 @@ function PostsGrid({ posts, activeTab, handleTabChange, handleDetailPageTogo }: 
         {/* reel, tagged 버튼도 동일하게 수정 */}
         <button
           type="button"
+          aria-label="reel"
           onClick={() => handleTabChange('reel')}
           className={`flex flex-col items-center p-3 border-b-2 ${
             activeTab === 'reel' ? 'border-black' : 'border-transparent opacity-60'
@@ -39,6 +41,7 @@ function PostsGrid({ posts, activeTab, handleTabChange, handleDetailPageTogo }: 
         </button>
         <button
           type="button"
+          aria-label="tagged"
           onClick={() => handleTabChange('tagged')}
           className={`flex flex-col items-center p-3 border-b-2 ${
             activeTab === 'tagged' ? 'border-black' : 'border-transparent opacity-60'

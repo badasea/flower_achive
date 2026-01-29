@@ -41,7 +41,7 @@ function ProfileHeader({ handleStoryModal, handleHighlightModal } : ProfileHeade
           href="https://github.com/badasea/flower_achive"
           target="_blank"
           rel="noreferrer"
-          className="inline-flex w-full items-center justify-center rounded-lg bg-blue-500 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-600 transition"
+          className="inline-flex w-full items-center justify-center rounded-lg bg-blue-700 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-600 transition"
         >
          깃허브 링크
         </Link>

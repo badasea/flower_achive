@@ -1,6 +1,8 @@
 // components/ProfileHeader.tsx
 "use client";
+
 import Image from "next/image";
+import Link from "next/link";
 
 interface ProfileHeaderProps {
   handleStoryModal: () => void;
@@ -34,6 +36,17 @@ function ProfileHeader({ handleStoryModal, handleHighlightModal } : ProfileHeade
         </ul>
       </div>
     </header>
+      <div className="max-w-6xl mx-auto px-4 md:px-8 pb-3">
+        <Link
+          href="https://github.com/badasea/flower_achive"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex w-full items-center justify-center rounded-lg bg-blue-500 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-600 transition"
+        >
+         깃허브 링크
+        </Link>
+      </div>
+
       <div className="flex flex-row items-center pl-4 pb-4 md:p-8 max-w-6xl mx-auto">
         <div
           className="w-20 flex-shrink-0 flex flex-col items-center gap-1"

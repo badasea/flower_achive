@@ -49,4 +49,4 @@ function StoryForm({ progress, isStoryModal, handleCloseModal }: StoryFormProps)
 }
 
 
-export default StoryForm
+export default StoryForm;

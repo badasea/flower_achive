@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { FaGithub, FaInstagram } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
 
 function Footer() {
   const year = new Date().getFullYear();
@@ -23,14 +22,6 @@ function Footer() {
           >
             <FaGithub className="h-5 w-5" />
           </Link>
-
-          {/* Email */}
-          <a
-            href="jungbada269@naver.com"
-            className="hover:text-black transition"
-          >
-            <HiOutlineMail className="h-5 w-5" />
-          </a>
 
           {/* Instagram */}
           <Link

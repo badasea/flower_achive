@@ -12,7 +12,8 @@ const nextConfig: NextConfig = {
 
   // next/image 사용 시 필요할 수 있는 설정입니다.
   images: {
-    unoptimized: true,
+    formats: ["image/avif", "image/webp"],
+    // unoptimized: false (기본값)
   },
 };
 

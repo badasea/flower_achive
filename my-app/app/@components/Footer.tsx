@@ -7,8 +7,9 @@ function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-black/10 mt-10">
-      <div className="max-w-6xl mx-auto px-4 md:px-8 py-6 text-sm text-black/60 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+    // dark:border-white/10 추가
+    <footer className="border-t border-black/10 dark:border-white/10 mt-10">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 py-6 text-sm text-black/60 dark:text-white/60 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p>© {year} 바다의 꽃꽂이 아카이브. All rights reserved.</p>
         <p>Made with Next.js · Tailwind CSS</p>
 
@@ -19,7 +20,8 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub open"
-            className="inline-flex items-center gap-2 hover:text-black transition"
+            // dark:hover:text-white 추가
+            className="inline-flex items-center gap-2 hover:text-black dark:hover:text-white transition"
           >
             <FaGithub className="h-5 w-5" />
           </Link>
@@ -30,7 +32,8 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram Open"
-            className="inline-flex items-center gap-2 hover:text-black transition"
+            // dark:hover:text-white 추가
+            className="inline-flex items-center gap-2 hover:text-black dark:hover:text-white transition"
           >
             <FaInstagram className="h-5 w-5" />
           </Link>
@@ -39,6 +42,5 @@ function Footer() {
     </footer>
   );
 }
-
 
 export default Footer;

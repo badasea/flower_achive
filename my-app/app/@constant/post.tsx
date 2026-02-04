@@ -1,5 +1,11 @@
 export const posts = [
   {
+    id: 22,
+    src: "/post_22.png",
+    likes: 1,
+    comments: 1,
+  },
+  {
     id: 21,
     src: "/post_21.png",
     likes: 1,
@@ -8,6 +14,12 @@ export const posts = [
   {
     id: 20,
     src: "/post_20.png",
+    likes: 1,
+    comments: 1,
+  },
+  {
+    id: 23,
+    src: "/post_23.png",
     likes: 1,
     comments: 1,
   },

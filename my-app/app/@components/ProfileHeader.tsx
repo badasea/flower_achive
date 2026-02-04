@@ -5,11 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface ProfileHeaderProps {
+  postLength: number;
   handleStoryModal: () => void;
   handleHighlightModal: () => void;
 }
 
-function ProfileHeader({ handleStoryModal, handleHighlightModal } : ProfileHeaderProps) {
+function ProfileHeader({ postLength, handleStoryModal, handleHighlightModal } : ProfileHeaderProps) {
   return (
     <>
     <header className="flex gap-10 flex-row items-center p-4 md:p-8 max-w-6xl mx-auto">
@@ -28,7 +29,7 @@ function ProfileHeader({ handleStoryModal, handleHighlightModal } : ProfileHeade
         </div>
         <ul className="flex gap-8 mb-4 text-sm">
           <li>
-            <span className="font-bold block text-lg">22</span> posts
+            <span className="font-bold block text-lg">{postLength}</span> posts
           </li>
           <li>
             <span className="font-bold block text-lg">2025</span>since

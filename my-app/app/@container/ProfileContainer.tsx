@@ -132,6 +132,7 @@ useEffect(() => {
     <>
       {/* profile form */}
       <ProfileHeader
+       postLength={posts.length}
        handleStoryModal={handleStoryModal}
        handleHighlightModal={handleHighlightModal} />
       

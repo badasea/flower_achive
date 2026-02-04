@@ -14,7 +14,11 @@ function DetailContainer() {
 
   // main page router
   const handleMainPageTogo = () => {
-    router.back();
+    if (window.history.length <= 2) {
+      router.push('https://flower-achive-ndkx.vercel.app/');
+    } else {
+      router.back();
+    }
   }
 
   const handleShare = async () => {
